@@ -1,27 +1,25 @@
 # BlockchainExplorer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+BlockchainExplorer helps searching (Etherium) wallet address to get more details about it.
+
+note: Application uses [EtherScanAPI](https://etherscan.io/apis) to gain access to wallet details
+
+![Logo](./src/assets/favicon.png)
+
+## Installation
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![sample gif](./src/assets/website.gif)
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Deployment
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The application uses [Netlify](https://www.netlify.com/?utm_source=google&utm_medium=paid_search&utm_campaign=12755510784&adgroup=118788138897&utm_term=netlify&utm_content=kwd-309804753741&creative=514583565825&device=c&matchtype=b&location=9044951&gad=1) as its deployment platform.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Refer [Hosted production app link](https://main--aquamarine-frangipane-063b64.netlify.app/)
