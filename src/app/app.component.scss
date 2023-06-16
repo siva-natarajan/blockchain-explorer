@@ -1,0 +1,21 @@
+.banner {
+  top: 10%;
+  // position: absolute;
+  background-color: aqua;
+  width: 100vw;
+  color: black;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.app-container {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  min-height: 100%;
+}

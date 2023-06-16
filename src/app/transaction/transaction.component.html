@@ -1,0 +1,39 @@
+<h2>{{ this.txType.toUpperCase() }} Transactions:</h2>
+<div class="container">
+  <table class="table" *ngIf="!this.isError">
+    <thead>
+      <tr>
+        <th *ngFor="let data of objectKey(this.txData?.result[0])">
+          {{ data }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of this.txData?.result">
+        <td>{{ data.blockNumber }}</td>
+        <td>{{ data.timeStamp }}</td>
+        <td>{{ data.hash }}</td>
+        <td>{{ data.nonce }}</td>
+        <td>{{ data.blockHash }}</td>
+        <td>{{ data.transactionIndex }}</td>
+        <td>{{ data.from }}</td>
+        <td>{{ data.to }}</td>
+        <td>{{ data.value }}</td>
+        <td>{{ data.gas }}</td>
+        <td>{{ data.gasPrice }}</td>
+        <td>{{ data.isError }}</td>
+        <td>{{ data.txreceipt_status }}</td>
+        <td>{{ data.input }}</td>
+        <td>{{ data.contractAddress }}</td>
+        <td>{{ data.cumulativeGasUsed }}</td>
+        <td>{{ data.gasUsed }}</td>
+        <td>{{ data.confirmations }}</td>
+        <td>{{ data.methodId }}</td>
+        <td>{{ data.functionName }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="this.isError">
+    <p>{{ jsonStringify(this.txData) }}</p>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="home-container">
+  <section>
+    <!-- <form (submit)="this.loadResultComponents(walletAddress.value)"> -->
+    <div class="search-box">
+      <button
+        type="submit"
+        class="btn-search"
+        (click)="this.loadResultComponents(walletAddress.value)"
+      >
+        <i class="fas fa-search"></i>
+      </button>
+      <input
+        type="text"
+        class="input-search"
+        placeholder="Enter Address"
+        (keydown.enter)="this.loadResultComponents(walletAddress.value)"
+        #walletAddress
+      />
+    </div>
+  </section>
+  <p>0xd6216fc19db775df9774a6e33526131da7d19a2c</p>
+  <section>
+    <app-balance
+      *ngIf="this.loadTransactionComp"
+      [walletAddress]="walletAddress.value"
+    ></app-balance>
+    <app-transaction
+      *ngIf="this.loadTransactionComp"
+      [walletAddress]="walletAddress.value"
+      txType="external"
+    ></app-transaction>
+    <app-transaction
+      *ngIf="this.loadTransactionComp"
+      [walletAddress]="walletAddress.value"
+      txType="internal"
+    ></app-transaction>
+  </section>
+</div>
